@@ -38,7 +38,7 @@ Follow these steps to get started with CautionX:
 
 ### 1️⃣ **Clone the Repository**
 ```bash
-$ git clone https://github.com/sairohithtappatla/cautionx.git
+$ git clone https://github.com/sairohithtappatla/Cautionx.git
 $ cd cautionx
 ```
 
