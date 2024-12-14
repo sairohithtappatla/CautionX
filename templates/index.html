@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CautionX - Advanced Threat Detection</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <h2>CautionX</h2>
+            <ul>
+                <li id="url-detection-btn">URL Detection</li>
+                <li id="threat-analysis-btn">Threat Analysis</li>
+                <li id="logs-btn">Logs</li>
+                <li id="settings-btn">Settings</li>
+            </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="content">
+            <!-- URL Detection Section -->
+            <div id="url-detection" class="section active">
+                <h3>URL Detection</h3>
+                <form id="url-form">
+                    <input type="text" id="url-input" name="url" placeholder="Enter URL for Detection">
+                    <div class="button-group">
+                        <button type="submit" id="check-url-btn">Check URL</button>
+                        <button type="button" id="retry-url-btn" class="red-button">Retry</button>
+                    </div>
+                </form>
+                <div id="url-result" class="result-box"></div>
+            </div>
+
+            <!-- Threat Analysis Section -->
+            <div id="threat-analysis" class="section">
+                <h3>Threat Analysis</h3>
+                <form id="threat-form">
+                    <textarea id="threat-url-input" name="url" placeholder="Enter URL for Threat Analysis"></textarea>
+                    <div class="button-group">
+                        <button type="submit" id="check-threat-btn">Analyze Threat</button>
+                        <button type="button" id="retry-threat-btn" class="red-button">Retry</button>
+                    </div>
+                </form>
+                <div class="result-container">
+                    <div id="threat-report" class="report-box">No report available.</div>
+                    <div id="progress-container-threat" style="display:none;">
+                        <div id="progress-circle-threat">
+                            <span id="progress-text-threat">0%</span>
+                        </div>
+                        <div id="threat-score">Score: <span id="threat-score-value">0</span>/100</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

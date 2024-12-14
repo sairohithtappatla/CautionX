@@ -1,0 +1,208 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-right: 3px solid #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar h2 {
+  color: #a5a5ff;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  padding-top: 48%;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  text-align: center;
+  background-color: #444;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background-color: #555;
+  color: #ffab00;
+}
+
+/* Main Content Styling */
+.content {
+  flex-grow: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  display: none;
+  width: 100%;
+  max-width: 900px;
+}
+
+.section.active {
+  display: block;
+}
+
+.result-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Form Styling */
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"], textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button#check-url-btn, button#check-threat-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.red-button {
+  background-color: red;
+  color: white;
+}
+
+/* Report Box Styling */
+.report-box {
+  flex: 1;
+  background-color: #333;
+  border: 1px solid #888;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 300px;
+  margin-right: 20px;
+}
+
+.report-box p {
+  margin: 0;
+  padding: 4px;
+  font-size: 14px;
+}
+/* Circular Progress Bar Styling */
+#progress-container-threat {
+  width: 150px;
+  height: 150px;
+}
+
+#progress-circle-threat {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(green 0deg, red 0deg);
+  transition: background 0.3s ease-in-out;
+}
+
+#progress-text-threat {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+}
+
+#threat-score {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #333;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
