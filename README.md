@@ -67,10 +67,10 @@ Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser to start exp
 Get a sleek, user-friendly interface to interact with CautionX.
 
 ### 🔍 **URL Detection**
-![URL Detection]![image](https://github.com/user-attachments/assets/e84cf95a-e6fa-415c-93e0-18ed72ab1f33)
+![URL Detection]!![image](https://github.com/user-attachments/assets/48ad4380-ba7a-4e88-8e1e-11536707d325)
 
 ### 🧬 **Threat Analysis**
-![Threat Analysis]![image](https://github.com/user-attachments/assets/8b0093ac-0b9a-4306-b1c6-0c06d2414183)
+![Threat Analysis]!![image](https://github.com/user-attachments/assets/107aed0c-487d-4377-8e75-2a2cdf4ae8db)
 
 
 ---
