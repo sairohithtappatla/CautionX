@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CautionX - Advanced Threat Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <h2><i class="fas fa-shield-alt"></i> CautionX</h2>
+            <ul>
+                <li id="url-detection-btn"><i class="fas fa-search"></i> URL Detection</li>
+                <li id="threat-analysis-btn"><i class="fas fa-biohazard"></i> Threat Analysis</li>
+                <li id="logs-btn"><i class="fas fa-list"></i> Logs</li>
+                <li id="settings-btn"><i class="fas fa-cog"></i> Settings</li>
+            </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="content">
+            <!-- URL Detection Section -->
+            <div id="url-detection" class="section active">
+                <h3><i class="fas fa-search"></i> URL Detection</h3>
+                <form id="url-form">
+                    <input type="text" id="url-input" name="url" placeholder="Enter URL for Detection">
+                    <div class="button-group">
+                        <button type="submit" id="check-url-btn"><i class="fas fa-check-circle"></i> Check URL</button>
+                        <button type="button" id="retry-url-btn" class="red-button"><i class="fas fa-redo"></i> Retry</button>
+                    </div>
+                </form>
+                <div id="url-result" class="result-box"></div>
+            </div>
+
+            <!-- Threat Analysis Section -->
+            <div id="threat-analysis" class="section">
+                <h3><i class="fas fa-biohazard"></i> Threat Analysis</h3>
+                <form id="threat-form">
+                    <textarea id="threat-url-input" name="url" placeholder="Enter URL for Threat Analysis"></textarea>
+                    <div class="button-group">
+                        <button type="submit" id="check-threat-btn"><i class="fas fa-microscope"></i> Analyze Threat</button>
+                        <button type="button" id="retry-threat-btn" class="red-button"><i class="fas fa-redo"></i> Retry</button>
+                    </div>
+                </form>
+                <div class="result-container">
+                    <div id="threat-report" class="report-box">No report available.</div>
+                    <div id="progress-container-threat" style="display:none;">
+                        <div id="progress-circle-threat">
+                            <span id="progress-text-threat">0%</span>
+                        </div>
+                        <div id="threat-score">Score: <span id="threat-score-value">0</span>/100</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logs Modal -->
+    <div id="popup-logs" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('popup-logs')">&times;</span>
+            <h2>Logs</h2>
+            <div id="logs-content">
+                <p>Logs section will be updated soon. Stay tuned for exciting features!</p>
+                <!-- <button class="red-button" onclick="closeModal('popup-logs')">Back</button> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="popup-settings" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('popup-settings')">&times;</span>
+            <h2>Settings</h2>
+            <form id="settings-form">
+                <label for="api-key">VirusTotal API Key:</label>
+                <input type="text" id="api-key" name="api-key" placeholder="Enter your VirusTotal API Key">
+                <p>Settings will be enhanced soon with more customization options!</p>
+                <button type="submit">Save Settings</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
